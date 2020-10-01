@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{677F0AE6-E897-4D2E-ADB5-EEA6366A12CA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EverythingSharp</RootNamespace>
+    <AssemblyName>EverythingSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JetBrains.Annotations, Version=10.2.1.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\packages\JetBrains.Annotations.10.2.1\lib\net\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sprache, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sprache.2.3.1\lib\net45\Sprache.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnitsNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f8601875a1f041da, processorArchitecture=MSIL">
+      <HintPath>..\packages\UnitsNet.4.71.0\lib\net40\UnitsNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\Entities\IVehiclePartFuelTank.cs" />
+    <Compile Include="API\Templates\IThingTemplate.cs" />
+    <Compile Include="Common\Entities\Pawn.cs" />
+    <Compile Include="Common\Enums\PawnGender.cs" />
+    <Compile Include="API\Templates\IUnitTemplate.cs" />
+    <Compile Include="Common\Templates\PawnTemplate.cs" />
+    <Compile Include="Common\Entities\VehiclePartFuelTank.cs" />
+    <Compile Include="Common\Builders\BuilderBase.cs" />
+    <Compile Include="API\Entities\IVehiclePartEngine.cs" />
+    <Compile Include="Common\Entities\Thing.cs" />
+    <Compile Include="Common\Entities\VehiclePartEngine.cs" />
+    <Compile Include="Common\Templates\ThingTemplate.cs" />
+    <Compile Include="Common\Templates\UnitTemplate.cs" />
+    <Compile Include="Common\Templates\VehiclePartEngineTemplate.cs" />
+    <Compile Include="Common\Templates\ConsumableItemTemplate.cs" />
+    <Compile Include="Common\Entities\Entity.cs" />
+    <Compile Include="Common\Builders\EntityBuilderBase.cs" />
+    <Compile Include="Common\Factories\EntityFactoryBase.cs" />
+    <Compile Include="Common\Collections\EntityMap.cs" />
+    <Compile Include="Common\Factories\FactoryBase.cs" />
+    <Compile Include="API\Builders\IBuilder.cs" />
+    <Compile Include="API\Entities\IConsumableItem.cs" />
+    <Compile Include="API\Traits\IDeletable.cs" />
+    <Compile Include="API\Data\IDictionaryPairRef.cs" />
+    <Compile Include="API\Entities\IEntity.cs" />
+    <Compile Include="API\Factories\IFactory.cs" />
+    <Compile Include="API\Entities\IItem.cs" />
+    <Compile Include="API\Collections\IKeyValueMap.cs" />
+    <Compile Include="API\Data\IListItemRef.cs" />
+    <Compile Include="API\Data\IMaybe.cs" />
+    <Compile Include="API\Entities\IPawn.cs" />
+    <Compile Include="API\Traits\IRemovable.cs" />
+    <Compile Include="API\Data\IStackOf.cs" />
+    <Compile Include="Common\Entities\Item.cs" />
+    <Compile Include="Common\Factories\ItemFactory.cs" />
+    <Compile Include="API\Templates\ITemplate.cs" />
+    <Compile Include="API\Traits\ITemplated.cs" />
+    <Compile Include="Common\Templates\ItemTemplate.cs" />
+    <Compile Include="API\Entities\IUnit.cs" />
+    <Compile Include="API\Entities\IVehicle.cs" />
+    <Compile Include="API\Entities\IVehiclePart.cs" />
+    <Compile Include="API\Entities\IVehicleSeat.cs" />
+    <Compile Include="Common\Serialization\Json\Converters\JsonMassConverter.cs" />
+    <Compile Include="Common\Serialization\Json\Converters\JsonVolumeConverter.cs" />
+    <Compile Include="Common\Collections\KeyValueMap.cs" />
+    <Compile Include="Common\Events\KeyValueMapEventArgs.cs" />
+    <Compile Include="Common\Events\KeyValueMapEventHandler.cs" />
+    <Compile Include="Common\Events\KeyValueMapItemAddedEventArgs.cs" />
+    <Compile Include="Common\Events\KeyValueMapItemModifiedEventArgs.cs" />
+    <Compile Include="Common\Events\KeyValueMapItemRemovedEventArgs.cs" />
+    <Compile Include="Common\Data\Maybe.cs" />
+    <Compile Include="Common\Data\PhysicalStackOf.cs" />
+    <Compile Include="Common\Templates\VehiclePartFuelTankTemplate.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\Templates\Template.cs" />
+    <Compile Include="Common\Entities\Unit.cs" />
+    <Compile Include="Common\Entities\Vehicle.cs" />
+    <Compile Include="Common\Entities\VehiclePart.cs" />
+    <Compile Include="Common\Collections\VehiclePartMap.cs" />
+    <Compile Include="Common\Templates\VehiclePartTemplate.cs" />
+    <Compile Include="Common\Entities\VehicleSeat.cs" />
+    <Compile Include="Common\Collections\VehicleSeatMap.cs" />
+    <Compile Include="Common\Enums\VehicleSeatType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
